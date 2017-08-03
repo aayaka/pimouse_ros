@@ -1,4 +1,4 @@
-#! /usr/bin/env python
+#!/usr/bin/env python
 #encoding: utf8
 import sys, rospy
 from pimouse_ros.msg import LightSensorValues
@@ -15,9 +15,9 @@ def get_freq():
 	return f
 
 if __name__ == '__main__':
-	devfile = "/dev/rtlightsensor0"
-	rospy.init_node("lightsensors")
-	pub = rospy.Publisher("lightsensors", LightSensorValues, queue_size=1)
+	devfile = '/dev/rtlightsensor0'
+	rospy.init_node('lightsensors')
+	pub = rospy.Publisher('lightsensors', LightSensorValues, queue_size=1)
 
 	freq = get_freq()
 	rate = rospy.Rate(freq)
